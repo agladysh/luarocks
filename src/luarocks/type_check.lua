@@ -34,6 +34,7 @@ rockspec_types = {
    },
    MUST_source = {
       platforms = {},
+      protocol = "string",
       MUST_url = "string",
       md5 = "string",
       file = "string",
