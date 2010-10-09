@@ -159,7 +159,7 @@ function load_local_rockspec(filename)
    if protocol == "http" or protocol == "https" or protocol == "ftp" or protocol == "file" then
       rockspec.source.file = rockspec.source.file or dir.base_name(rockspec.source.url)
    end
-   rockspec.source.protocol, rockspec.source.pathname = protocol, pathname
+   rockspec.source.protocol, rockspec.source.pathname = rockspec.source.protocol or protocol, pathname
 
    -- Temporary compatibility
    if not rockspec.source.cvs_module then rockspec.source.module = rockspec.source.cvs_module end
